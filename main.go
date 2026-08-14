@@ -15,7 +15,7 @@ func main() {
 func readFromFile() error {
 	file, err := os.Create("one.txt")
 	if err != nil {
-		return fmt.Errorf("error reading file", err)
+		return fmt.Errorf("error reading file %w", err)
 	}
 	defer file.Close()
 	return nil
