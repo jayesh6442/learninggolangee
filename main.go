@@ -1,7 +1,22 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
-	fmt.Println("hi there we are in go lang")
+	err := readFromFile()
+	if err != nil {
+		os.Exit(1)
+	}
+}
+
+func readFromFile() error {
+	file, err := os.Create("one.txt")
+	if err != nil {
+		return fmt.Errorf("error reading file", err)
+	}
+	defer file.Close()
+	return nil
 }
