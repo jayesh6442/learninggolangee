@@ -13,10 +13,17 @@ func main() {
 
 	var abc uint = 34234234 // no nagative for unsigned data type
 
-	var onte uint8 = 124    // no nagative for unsigned data type
-	var zy uint16 = 3423    // no nagative for unsigned data type
-	onerauint32 := 34234234 // no nagative for unsigned data type
-
+	var onte uint8 = 124         // no nagative for unsigned data type
+	var zy uint16 = 3423         // no nagative for unsigned data type
+	var testone int32 = 34234234 // no nagative for unsigned data type
 	var teston uint64 = 34234234 // no nagative for unsigned data type
-	fmt.Println(x, y, z, a, abc, onte, zy, onerauint32, teston)
+
+	fmt.Println(x, y, z, a, abc, onte, zy, testone, teston)
+
+	var testfloat float32 = 3.55
+	var testfloattwo float64 = 4.23
+	var boolne bool = false
+
+	var str string = " hi there "
+	fmt.Println(testfloat, testfloattwo, boolne, str)
 }
