@@ -29,23 +29,13 @@
 //	}
 package main
 
-import (
-	"fmt"
-	"strconv"
-	"unsafe"
-)
+import "fmt"
 
 func main() {
-	var i int
-	var i32 int32
-	var f32 float32
-	var b bool
-	var s string
-
-	fmt.Println("int     ", unsafe.Sizeof(i))   // 8 on amd64/arm64
-	fmt.Println("int32   ", unsafe.Sizeof(i32)) // 4
-	fmt.Println("float32 ", unsafe.Sizeof(f32)) // 4
-	fmt.Println("bool    ", unsafe.Sizeof(b))   // 1
-	fmt.Println("string  ", unsafe.Sizeof(s))   // 16 ← the HEADER, not the text
-	fmt.Println("IntSize ", strconv.IntSize)    // 64
+	var u uint8 = 0
+	u--
+	fmt.Println(u)
+	var x int8 = 127
+	x++
+	fmt.Println(x)
 }
