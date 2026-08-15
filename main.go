@@ -2,10 +2,16 @@ package main
 
 import "fmt"
 
-func main() {
-	total := 32
-	count := 2
-	average := total / count
+var test int = 23
 
-	fmt.Println(average)
+// var onetest := 243;
+func main() {
+	fmt.Println(onetest)
+	fmt.Println(test)
+	test := 23
+	test = 34
+	fmt.Println(test)
+	var one int16 = 234
+	one = 222
+	fmt.Println(one)
 }
